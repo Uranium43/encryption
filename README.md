@@ -20,7 +20,7 @@ This is a simple Flask web application for encrypting and decrypting images usin
 3. Run the Flask application.
 
     ```bash
-    python app.py
+    python image.py
     ```
 
     The application should now be running locally. Open your web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the web interface.
