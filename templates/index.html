@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Encryption</h1>
+        <div class="form-container">
+            <form action="/encrypt" method="post" enctype="multipart/form-data">
+                <label for="password">Enter Password:</label>
+                <input type="password" name="password" required>
+                <br>
+                <label for="image">Choose Image:</label>
+                <input type="file" name="image" accept="image/*" required>
+                <br>
+                <button type="submit" class="encrypt-btn">Encrypt</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="/decrypt" method="post" enctype="multipart/form-data">
+                <label for="password">Enter Password:</label>
+                <input type="password" name="password" required>
+                <br>
+                <label for="encrypted_image">Choose Encrypted Image:</label>
+                <input type="file" name="encrypted_image" accept=".enc" required>
+                <br>
+                <button type="submit" class="decrypt-btn">Decrypt</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
